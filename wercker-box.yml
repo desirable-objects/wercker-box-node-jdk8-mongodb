@@ -1,5 +1,5 @@
 name: node-jdk8-mongodb
-version: 0.0.1
+version: 0.0.2
 inherits: palerique/java8-oracle-nodejs@0.0.9
 type: service
 platform: ubuntu
