@@ -1,0 +1,14 @@
+name: node-jdk8-mongodb
+version: 0.0.1
+inherits: palerique/java8-oracle-nodejs@0.0.9
+type: service
+platform: ubuntu
+description: wercker box for geb testing projects
+keywords:
+  - jdk8
+  - nodejs
+  - mongodb
+  - geb
+script: |
+  sudo apt-get update -y
+  sudo apt-get install mongodb xvfb -y
