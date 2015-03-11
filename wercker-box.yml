@@ -3,12 +3,12 @@ version: 0.0.1
 inherits: palerique/java8-oracle-nodejs@0.0.9
 type: service
 platform: ubuntu
-description: wercker box for geb testing projects
+description: wercker box including nodejs, mongodb, and jdk8 so that Geb functional testing can be run on nodejs projects
 keywords:
   - jdk8
   - nodejs
   - mongodb
-  - geb
+  - firefox
 script: |
   sudo apt-get update -y
-  sudo apt-get install mongodb xvfb -y
+  sudo apt-get install mongodb xvfb firefox -y
