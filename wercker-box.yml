@@ -1,5 +1,5 @@
 name: node-jdk8-mongodb
-version: 0.0.2
+version: 0.0.3
 inherits: palerique/java8-oracle-nodejs@0.0.9
 type: service
 platform: ubuntu
@@ -9,6 +9,8 @@ keywords:
   - nodejs
   - mongodb
   - firefox
+  - xvfb
 script: |
   sudo apt-get update -y
   sudo apt-get install mongodb xvfb firefox -y
+  Xvfb :33 &
