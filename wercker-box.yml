@@ -15,5 +15,5 @@ script: |
   sudo apt-get install xvfb firefox -y
   chmod +x xvfb.sh
   sudo cp xvfb.sh /etc/init.d/xvfb
-  update-rc.d xvfb defaults
+  sudo update-rc.d xvfb defaults
   sudo service xvfb start
