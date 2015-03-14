@@ -1,5 +1,5 @@
 name: node-jdk8-mongodb
-version: 0.0.6
+version: 0.0.7
 inherits: palerique/java8-oracle-nodejs@0.0.9
 type: service
 platform: ubuntu
@@ -17,3 +17,5 @@ script: |
   sudo cp xvfb.sh /etc/init.d/xvfb
   sudo update-rc.d xvfb defaults
   sudo service xvfb start
+  export DISPLAY=:99
+  echo 'export DISPLAY=:99' | sudo tee -a /etc/profile
