@@ -1,5 +1,5 @@
 name: node-jdk8-mongodb
-version: 0.0.5
+version: 0.0.6
 inherits: palerique/java8-oracle-nodejs@0.0.9
 type: service
 platform: ubuntu
@@ -14,5 +14,6 @@ script: |
   sudo apt-get update -y
   sudo apt-get install xvfb firefox -y
   chmod +x xvfb.sh
-  sudo cp xvfb.sh /etc/init.d/xvfb.sh
+  sudo cp xvfb.sh /etc/init.d/xvfb
+  update-rc.d xvfb defaults
   sudo service xvfb start
