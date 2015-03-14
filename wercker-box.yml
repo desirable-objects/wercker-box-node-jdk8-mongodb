@@ -1,8 +1,8 @@
 name: node-jdk8-mongodb
-version: 0.0.4
+version: 0.0.5
 inherits: palerique/java8-oracle-nodejs@0.0.9
 services:
-  - mongodb
+  - wercker/mongodb
 type: service
 platform: ubuntu
 description: wercker box including nodejs, mongodb, and jdk8 so that Geb functional testing can be run on nodejs projects
