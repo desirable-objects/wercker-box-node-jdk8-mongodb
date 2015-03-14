@@ -1,11 +1,9 @@
 name: node-jdk8-mongodb
 version: 0.0.5
 inherits: palerique/java8-oracle-nodejs@0.0.9
-services:
-  - wercker/mongodb
 type: service
 platform: ubuntu
-description: wercker box including nodejs, mongodb, and jdk8 so that Geb functional testing can be run on nodejs projects
+description: wercker box including nodejs, and jdk8 so that Geb functional testing can be run on nodejs projects
 keywords:
   - jdk8
   - nodejs
@@ -15,4 +13,6 @@ keywords:
 script: |
   sudo apt-get update -y
   sudo apt-get install xvfb firefox -y
-  Xvfb :33 &
+  chmod +x xvfb.sh
+  sudo cp xvfb.sh /etc/init.d/xvfb.sh
+  sudo service xvfb start
